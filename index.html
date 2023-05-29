@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="jquery-3.7.0.js"></script>
+    <script>
+        // Sembunyi
+        $(document).ready(function () {
+            $(".sembunyi").click(function () {
+                $("img").hide(1000);
+            });
+            $(".tampilkan").click(function () {
+                $("img").show(1000);
+            });
+        });
+        // Double
+        $(document).ready(function () {
+            $(".card").dblclick(function () {
+                $(this).css("background-color", "blue");
+            });
+        });
+        // Fade
+        $(document).ready(function () {
+            $("#fadein").click(function () {
+                $("#div1").fadeIn("slow");
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(1000);
+            });
+        });
+        $(document).ready(function () {
+            $("#fadeout").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(1000);
+            });
+        });
+        $(document).ready(function () {
+            $("#fadeto").click(function () {
+                $("#div1").fadeTo("slow", 0.3);
+                $("#div2").fadeTo("slow", 0.3);
+                $("#div3").fadeTo("slow", 0.3);
+            });
+        });
+    </script>
+    <title>Belajar JS</title>
+</head>
+
+<body>
+    <div class="judul">
+        <h1>Belajar JQuery</h1>
+        <p>Mata Kuliah Design Web</p>
+    </div>
+    <div class="container">
+        <div class="sembunyii">
+            <h3>1. Tombol Sembunyi</h3>
+            <button class="sembunyi">Sembunyikan</button>
+            <button class="tampilkan">Tampilkan</button>
+            <!-- <div class="gambar" id="gambar"> -->
+            <img src="https://i.pinimg.com/564x/81/a6/5d/81a65d3a38ac4fee1fb6b7524b07fac7.jpg" alt="">
+            <!-- </div> -->
+        </div>
+        <div class="double">
+            <h3>2. Tombol Double Click</h3>
+            <p>Double klik pada object maka akan berubah warna</p>
+            <div class="row">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="fade">
+            <h3>3. Tombol Fade</h3>
+            <button id="fadein">Fade In</button>
+            <button id="fadeout">Fade Out</button>
+            <button id="fadeto">Fade To</button>
+            <div class="kotak">
+                <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
